@@ -147,19 +147,13 @@ fbq('track', "PageView");</script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1559622477662269&amp;ev=PageView&amp;noscript=1"></noscript>
 <!-- End Facebook Pixel Code -->
 <style>.async-hide { opacity: 0 !important} </style>
-<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
-h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
-})(window,document.documentElement,'async-hide','dataLayer',4000,
-{'GTM-5HMWT6J':true});</script>
+<!-- Google tag (gtag.js) -->
+<script async src=“https://www.googletagmanager.com/gtag/js?id=G-DQCK93S5HS”></script>
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-75537116-1', 'auto');
-ga('require', 'GTM-5HMWT6J');
-ga('send', 'pageview');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(‘js’, new Date());
+  gtag(‘config’, ‘G-DQCK93S5HS’);
 </script>
 <!-- Subscribe to RSS http://www.wpbeginner.com/wp-tutorials/how-to-setup-auto-discovery-for-your-wordpress-rss-feeds/ -->
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="Tubular">
@@ -557,24 +551,7 @@ removeIcon: false,
 removeAbout: false    },      
 necessaryCookies: [ 'wordpress_*','wordpress_logged_in_*' ],
 optionalCookies: [
-{
-name: 'analytics',
-label: 'Analytics Cookie',
-description: 'Analytical cookies help us to improve our website by collecting and reporting information os its usage.',
-cookies: [ '_ga', '_gid', '_gat', '__utma', 'AMP_TOKEN' ],
-onAccept : function(){
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-75537116-1', 'auto');
-ga('require', 'GTM-5HMWT6J');
-ga('send', 'pageview');
-},
-onRevoke : function(){
-},
-initialConsentState : 'on',
-},
+
 {
 name: 'intercom',
 label: 'Intercom Cookies',
