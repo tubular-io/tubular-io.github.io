@@ -322,8 +322,9 @@
                                   <div class="pp__header">
                                     <!-- <a href="http://app.tubular.io/#/register" target="_blank"> -->
                                       <h2><span>Pro</span> <br>
-                                        <span class="pp__price">$30</span>
-                                        <span class="pp__price pp__price--uk">£30</span></h2>
+                                        <span class="pp__price price-us">$36</span>
+                                        <span class="pp__price price-gb">£30</span>
+                                        <span class="pp__price price-eu">€35</span></h2>
                                         <p>per user / per month</p>
                                         <!-- </a> -->
                                         <!-- <a href="http://app.tubular.io/#/register" class="btn">Get started for FREE</a> -->
@@ -392,8 +393,9 @@
                                           <!-- <a href="#"><img class="pp__ico-enterprise" src="https://www.tubular.io/wp-content/themes/tubular-theme-2017/dist/images/ico-pp-enterprise.svg" alt=""></a> -->
                                           
                                           <h2><span>Enterprise</span> <br>
-                                            <span class="pp__price">$65</span>
-                                            <span class="pp__price pp__price--uk">£65</span></h2>
+                                            <span class="pp__price price-us">$78</span>
+                                            <span class="pp__price price-gb">£65</span>
+                                            <span class="pp__price price-eu">€75</span></h2>
                                             <p>per user / per month</p>
                                             <!-- </a> -->
                                             <!-- <a href="#" onclick="Intercom('showNewMessage', 'Enterprise Pricing Enquiry:')" class="btn btn--inverse-dark visible-xs">Talk to us</a> -->
@@ -484,8 +486,9 @@
                                           <div class="pp__header">
                                             <!-- <a href="http://app.tubular.io/#/register" target="_blank"> -->
                                               <h2><span>Pro</span> <br>
-                                                <span class="pp__price">$24</span>
-                                                <span class="pp__price--uk pp__price">£24</span></h2>
+                                                <span class="pp__price price-us">$360</span>
+                                                <span class="pp__price price-gb">£300</span>
+                                                <span class="pp__price price-eu">€350</span></h2>
                                                 <p>per user / per month</p>
                                                 <!-- </a> -->
                                                 <!-- <a href="http://app.tubular.io/#/register" class="btn">Get started for FREE</a> -->
@@ -555,8 +558,9 @@
                                                   <!-- <a href="#"><img class="pp__ico-enterprise" src="https://www.tubular.io/wp-content/themes/tubular-theme-2017/dist/images/ico-pp-enterprise.svg" alt=""></a> -->
                                                   
                                                   <h2><span>Enterprise</span> <br>
-                                                    <span class="pp__price">$52</span>
-                                                    <span class="pp__price pp__price--uk">£52</span></h2>
+                                                    <span class="pp__price price-us">$780</span>
+                                                    <span class="pp__price price-gb">£650</span>
+                                                    <span class="pp__price price-eu">€750</span></h2>
                                                     <p>per user / per month</p>
                                                     <!-- </a> -->
                                                     <!-- <a href="#" onclick="Intercom('showNewMessage', 'Enterprise Pricing Enquiry:')" class="btn btn--inverse-dark visible-xs">Talk to us</a> -->
@@ -1243,6 +1247,15 @@
                                                   
                                                   <script>
                                                     $(document).ready(function(){
+                                                      $.get("https://ipinfo.io", function(response) {
+                                                          if (response.country == 'GB') {
+                                                            $(".price-gb").show();
+                                                          } else if (response.country == 'US') {
+                                                            $(".price-us").show();
+                                                          } else {
+                                                            $(".price-eu").show();
+                                                          }
+                                                      }, "jsonp");
                                                       $('.slide-images-row').slick({
                                                         infinite: true,
                                                         slidesToShow: 3,
