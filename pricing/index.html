@@ -1254,13 +1254,13 @@
                                                   <script>
                                                     $(document).ready(function(){
                                                       $.get("https://ipinfo.io", function(response) {
-                                                          if (response.country == 'GB') {
-                                                            $(".price-gb").show();
-                                                          } else if (response.country == 'US') {
-                                                            $(".price-us").show();
-                                                          } else {
-                                                            $(".price-eu").show();
-                                                          }
+                                                        if (response.country == 'GB') {
+                                                          $(".price-gb").show();
+                                                        } else if (response.country == 'US') {
+                                                          $(".price-us").show();
+                                                        } else {
+                                                          $(".price-eu").show();
+                                                        }
                                                       }, "jsonp");
                                                       $('.slide-images-row').slick({
                                                         infinite: true,
