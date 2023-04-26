@@ -1,0 +1,5 @@
+@media screen and (max-width: 767px) {
+  .row .section__3col > h5 {
+    padding-top: 36px;
+  }
+}
