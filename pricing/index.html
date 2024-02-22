@@ -290,7 +290,14 @@
                                   <a id="toggle-year" class="btn btn--fill secund-btn">Yearly (2 months free)</a>
                                 </span>
                               </p>
-                              
+
+                              <p class="currency-buttons">
+                                <span class="btn-group">
+                                  <a id="toggle-gb" class="btn btn--fill first-btn">GBP</a>
+                                  <a id="toggle-us" class="btn btn--inverse second-btn">USD</a>
+                                  <a id="toggle-eu" class="btn btn--inverse third-btn">EUR</a>
+                                </span>
+                              </p>
                               
                               <li class="tab-header-and-content month-price-box">
                                 <!-- <a href="javascript:void(0)" class="is-active tab-link tab-link--pro tab-link">Pro</a> -->
@@ -1228,15 +1235,58 @@
                                                   
                                                   <script>
                                                     $(document).ready(function(){
-                                                      $.get("https://ipinfo.io", function(response) {
-                                                        if (response.country == 'GB') {
-                                                          $(".price-gb").show();
-                                                        } else if (response.country == 'US') {
-                                                          $(".price-us").show();
-                                                        } else {
-                                                          $(".price-eu").show();
-                                                        }
-                                                      }, "jsonp");
+                                                      // $.get("https://ipinfo.io", function(response) {
+                                                      //   if (response.country == 'GB') {
+                                                      //     $(".price-gb").show();
+                                                      //   } else if (response.country == 'US') {
+                                                      //     $(".price-us").show();
+                                                      //   } else {
+                                                      //     $(".price-eu").show();
+                                                      //   }
+                                                      // }, "jsonp");
+
+                                                      $(".price-gb").show();
+
+                                                      $('#toggle-gb').click(function(e){
+                                                      e.preventDefault();
+
+                                                      $(".price-gb").show();
+                                                      $(".price-eu").hide();
+                                                      $(".price-us").hide();
+
+                                                      $('#toggle-gb').addClass('btn--fill');
+                                                      $('#toggle-us').removeClass('btn--fill');
+                                                      $('#toggle-us').addClass('btn--inverse');
+                                                      $('#toggle-eu').removeClass('btn--fill');
+                                                      $('#toggle-eu').addClass('btn--inverse');
+                                          
+                                                    })
+                                                    $('#toggle-us').click(function(e){
+                                                      e.preventDefault();
+                                                      $(".price-gb").hide();
+                                                      $(".price-eu").hide();
+                                                      $(".price-us").show();
+
+                                                      $('#toggle-us').addClass('btn--fill');
+                                                      $('#toggle-gb').removeClass('btn--fill');
+                                                      $('#toggle-gb').addClass('btn--inverse');
+                                                      $('#toggle-eu').removeClass('btn--fill');
+                                                      $('#toggle-eu').addClass('btn--inverse');
+                                                    })
+                                                    $('#toggle-eu').click(function(e){
+                                                      e.preventDefault();
+                                                      $(".price-eu").show();
+                                                      $(".price-gb").hide();
+                                                      $(".price-us").hide();
+
+                                                      $('#toggle-eu').addClass('btn--fill');
+                                                      $('#toggle-us').removeClass('btn--fill');
+                                                      $('#toggle-us').addClass('btn--inverse');
+                                                      $('#toggle-gb').removeClass('btn--fill');
+                                                      $('#toggle-gb').addClass('btn--inverse');
+
+                                                    })
+
                                                       $('.slide-images-row').slick({
                                                         infinite: true,
                                                         slidesToShow: 3,
