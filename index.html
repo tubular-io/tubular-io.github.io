@@ -123,7 +123,59 @@ article.post ol li {padding-left:10px;}
 .cta-links a:first-of-type {display:none !important}
 header.site-header .header-min .cta-links__secondary {
 margin-left: 10px;
-}			</style>
+}		
+/* Home Loom - Start */
+.home-loom {
+  padding-top: 1em;
+  padding-bottom: 6em;
+}
+.home-loom h2, .home-loom p {
+  width: 100%;
+  max-width: unset;
+}
+.home-loom .section__content {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 1em;
+}
+.home-loom .section__content.loom-iframe {
+  padding-right: 3em;
+}
+.home-loom.walkthrough {
+  padding-top: 3em;
+}
+@media screen and (max-width: 767px) {
+  .home-loom {
+    padding: 3em 25px !important;
+  }
+  .home-loom.walkthrough {
+    padding: 3em 25px 4em 25px !important;
+  }
+  .home-loom .section__content {
+    padding-right: 0;
+  }
+  .home-loom .section__content.loom-iframe {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .home-loom .container--flex {
+    display: inline-grid;
+  }
+  .home-loom .section__content {
+    width: 100%;
+  }
+  .home-loom .section__content.loom-iframe {
+    padding-top: 1em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .home-loom {
+    padding-bottom: 4em;
+  }
+}
+/* Home Loom - End */
+</style>
 <!-- Typekit styles -->
 <script src="https://use.typekit.net/hck4gua.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -266,6 +318,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 </section>
+
+<!-- Home Loom -->
+<section class="home-loom section">
+  <div class="container container--flex container--full" style="position:relative;">
+    <div class="section__content">
+      <h2>Frustrated with losing leads in spreadsheets?</h2>
+      <p>Our CEO, David explains how Tubular CRM can help you organize your leads, maximize opportunities, and increase revenue. With an easy-to-use interface, customizable sales processes, AI integration, and seamless app connectivity, Tubular CRM is the perfect solution for streamlining your sales process.</p>
+    </div>
+    <div class="loom-iframe section__content">
+      <div style="position: relative; padding-bottom: 56.00624024960999%; height: 0;">
+        <iframe src="https://www.loom.com/embed/4d3eb50f69d44c68aec9b0fb5f3a154b?sid=6d3ee263-7ac7-46a2-9697-aafe5baf2d73" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Section 3 col -->
 <section class="section">
 <div class="container container--flex " style="position:relative;">
@@ -396,6 +464,22 @@ The Top 20 <strong>Most Affordable</strong> CRM Software report.</p>
 </div>
 <!-- Section integrations_list -->
 </div>
+
+<!-- Home Loom - Walkthrough -->
+<section class="home-loom walkthrough section">
+  <div class="container container--flex container--full" style="position:relative;">
+    <div class="section__content">
+      <h2>A quick intro to Tubular</h2>
+      <p>In the short intro we will quickly run through some of the main features and very quickly highlight a lot of what Tubular is used for and why people enjoy using.</p>
+    </div>
+    <div class="loom-iframe section__content">
+      <div style="position: relative; padding-bottom: 63.01531213191991%; height: 0;">
+        <iframe src="https://www.loom.com/embed/67126d369d094c549abfcc8a4a6836ea?sid=3e42815e-0074-43f8-83c4-0667ffe10224" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Add industries grid -->
 <div class="container container--full">
 <article id="post-3561" class="post-3561 page type-page status-publish hentry">
